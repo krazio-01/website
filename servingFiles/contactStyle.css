@@ -1,0 +1,100 @@
+h1 {
+    text-align: center;
+    margin: 10px 10px 10px 10px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 22px;
+    margin-bottom: 22px;
+}
+
+.myForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    flex-direction: column;
+    border: 2px solid rgb(171, 169, 169);
+    width: 600px;
+    height: 80vh;
+    border-radius: 15px;
+}
+
+.myInput {
+    position: relative;
+    padding: 14px;
+    margin: 15px;
+    height: 25px;
+    transition: border-color 0.2s;
+}
+
+.myInput input{
+    width: 470px;
+    font-size: 15px;
+    border: none;
+    border-bottom: 2px solid silver;
+}
+
+.myInput label{
+    position: absolute;
+    left: 15px;
+    top: 80%;
+    transform: translateY(-18px);
+    transition: all 0.25s ease-in-out;
+
+}
+
+.myInput textarea{
+    outline: 0;
+    resize: none;
+    margin: 15px 15px;
+}
+
+.myInput input:focus{
+    outline: 0;
+    border-width: 2px;
+    border-image: linear-gradient(to right, #ff0062, #00ffff);
+    border-image-slice: 1;
+}
+
+.myInput input:focus +label{
+    margin-top: -16px;
+    transition: 0.25s;
+    font-size: 0.9rem;
+    color: #2afadf;
+    font-weight: 800;
+}
+
+.myInput input:not([value=""]){
+    border-width: 2px;
+}
+
+.myInput input:not([value=""]) + label{
+    margin-top: -16px;
+}
+
+.btn{
+    width: 120px;
+    height: 40px;
+    padding: 10px 15px;
+    margin-top: 157px;
+    font-size: 15px;
+    background-size: 200%;
+    background-image: linear-gradient(to left, #12cbc4, #0652dd, #12cbc4);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+.btn:hover{
+    background-position: right;
+}
+
+.check:hover{
+    cursor: pointer;
+}

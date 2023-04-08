@@ -1,0 +1,33 @@
+extends base.pug 
+
+block scripts 
+    script 
+        include ../servingFiles/index.js
+
+block style 
+    style 
+        include ../servingFiles/style.css
+        include ../servingFiles/contactStyle.css
+
+block content 
+    div.container 
+        form(action= "/contact", method= "post", class= "myForm")
+            h1 Contact Us
+            div.myInput
+                <input type="text" name="name" value = "" onChange="this.setAttribute('value', this.value)">
+                label Name
+            div.myInput
+                <input type="phone" name="phone" value = "" onChange="this.setAttribute('value', this.value)">
+                label Phone number
+            div.myInput
+                <input type="email" name="email" value = "" onChange="this.setAttribute('value', this.value)">
+                label Email
+            div.myInput
+                <input type="text" name="address" value = "" onChange="this.setAttribute('value', this.value)">
+                label adress 
+            div.myInput
+                <textarea name = "myText" cols = "80" rows = "10" id = "describe"></textarea>
+                label Concern
+            //- <button class="btn">Submit</button>
+            button(class="btn")
+                | Submit

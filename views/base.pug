@@ -1,0 +1,23 @@
+doctype html
+html
+    head
+        title My Site - #{title}
+        block scripts
+        block style 
+    body
+        nav#navbar
+            ul
+                div#logo
+                    img(src="http://itsmyviews.com/wp-content/uploads/2012/05/Dance-Photo-Manipulations-in-adobephotoshop-background.jpg", alt="Logo")
+                    //- img(src='/servingFiles/logo.png')
+                li #[a(href="/") Home] 
+                li #[a(href="/") About] 
+                li #[a(href="/") Services] 
+                li #[a(href="/contact") Contact Us] 
+
+                button(onclick="window.location.href='/login'" class="log") Login
+                button(onclick="window.location.href='/register'" class="reg") Register
+
+        block content
+        footer#footer 
+            | Copyright © 2022 AmmanAcademy.com | All Rights Reserved 

@@ -1,0 +1,40 @@
+extends base.pug 
+
+block scripts
+    script
+        //- include ../servingFiles/email.js
+
+block style 
+    style
+        include ../servingFiles/style.css
+        include ../servingFiles/register.css
+
+block content 
+    div.container 
+        form(action= "/register", method= "post", class= "myForm")
+            h1 Register
+            div.myInput 
+                <input type="text" id = "name" name="name" value = "" onChange="this.setAttribute('value', this.value)">
+                label Name
+            div.myInput
+                <input type="text" id = "uname" name="uname" value = "" onChange="this.setAttribute('value', this.value)">
+                label Username
+            div.myInput
+                <input type="email" id = "email" name="email" value = "" onChange="this.setAttribute('value', this.value)">
+                label Email
+            div.myInput
+                <input type="password" id = "password" name="pass" value = "" onChange="this.setAttribute('value', this.value)">
+                label Password
+            div.myInput
+                <input type="password" id = "confpassword" name="confirmpass" value = "" onChange="this.setAttribute('value', this.value)">
+                label(id="label5") Confirm Password
+            div.myInput
+                <input type="phone" id = "number" name="phone" value = "">
+                label Number
+            div.gender 
+                label(class="toggle") Gender: 
+                    <input type="radio" class= "toggle2" name="gender" value = "male"> Male
+                    <input type="radio" class= "toggle1" name="gender" value = "female"> Female
+            
+            button(class="regbtn" id = "button" type = "submit" )
+                | Register

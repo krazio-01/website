@@ -1,0 +1,40 @@
+extends base.pug 
+
+block scripts 
+    script 
+        include ../servingFiles/index.js
+
+block style
+    style
+        include ../servingFiles/style.css
+        include ../servingFiles/login.css
+
+block content
+    div(class = "alert-box")
+        p(class = "alert")   
+            | msg
+
+    div.container 
+        form(action= "/login", method= "post", class= "myForm")
+            h1 Login 
+            div.myInput 
+                <input type="email" name="email" value = "" onChange="this.setAttribute('value', this.value)">
+                label Email
+
+            div.myInput 
+                <input type="password" name="password" value = "" onChange="this.setAttribute('value', this.value)">
+                label Password
+
+            //- <button class="btn">Submit</button>
+            button(id="my-btn" class="btn" type = "submit")
+                | Sign in
+
+            div(id="my-modal" class="modal")
+                div.modal-content
+                    span.close 
+                        x
+                    p 
+                        | Successfully loged in!
+
+            <label class = "checkBox">
+                <input type = "checkbox" value = "remember-me" class = "check"> Remember me

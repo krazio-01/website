@@ -1,0 +1,66 @@
+doctype html 
+html
+    head 
+        style 
+            include ../servingFiles/style.css 
+
+    body 
+        nav#navbar
+            ul
+                div#logo
+                    img(src="http://itsmyviews.com/wp-content/uploads/2012/05/Dance-Photo-Manipulations-in-adobephotoshop-background.jpg", alt="Logo")
+                    //- img(src='/servingFiles/logo.png')
+                li #[a(href="/") Home] 
+                li #[a(href="/") About] 
+                li #[a(href="/") Services] 
+                li #[a(href="/") Contact Us] 
+                
+        section#introSection 
+            div Welcome to Amman's Dance academy 
+            div.small Eat Sleep Dance Repeat 
+
+        section#missionSection 
+            h3 Our Mission 
+
+            div.card
+                h3 Dance Perfection
+
+                div.card-box
+                    div.card-image
+                        img(src = "https://us.123rf.com/450wm/krisdog/krisdog1807/krisdog180701421/105538425-a-male-street-dance-hip-hop-dancer-in-silhouette.jpg?ver=6" alt = "remote image")
+
+                    div.card-content 
+                        p Best dance Academy ever exist
+            div.card
+                h3 Dance as you like
+
+                div.card-box
+                    div.card-image
+                        img(src="https://i.pinimg.com/originals/f3/36/bc/f336bc0ccbaf04f7a49f4292031d5778.jpg")
+
+                    div.card-content 
+                        p Best dance Academy ever exist
+
+            div.card
+                h3 Expert Teaching
+
+                div.card-box
+                    div.card-image
+                        img(src="https://media.istockphoto.com/vectors/street-dance-dancer-silhouette-vector-id1094387266?k=6&m=1094387266&s=612x612&w=0&h=JMo_9i4KTK_FbvgnunY7pMXPVcmjS_4wvJIhjsnz7Xw=")
+
+                    div.card-content 
+                        p Best dance Academy ever exist
+
+        section#sponsorSection 
+            h3 Our Sponsors 
+
+            div#sponsor 
+                img(src="https://pbs.twimg.com/media/EyjQfGYU8AEs0xE.jpg" class="spImage")
+                img(src="https://icons-for-free.com/download-icon-skype+social+square+icon-1320185493812376667_512.png" class="spImage")
+                img(src="https://wallpapercave.com/wp/wp3453765.jpg" class="spImage")
+                img(src="https://images3.alphacoders.com/980/thumb-1920-980571.png" class="spImage")
+
+        footer#footer 
+            | Copyright © 2019 AmmanAcademy.com | All Rights Reserved 
+        script 
+            include ../servingFiles/index.js  
